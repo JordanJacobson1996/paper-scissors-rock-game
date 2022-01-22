@@ -49,7 +49,9 @@ function computerPlay (){
 function winner (playerScore, computerScore){
     if (playerScore > computerScore){
         return ("Player won! Score:" + playerScore + "-" + computerScore);
-    } else {
+    } else if (computerScore > playerScore){
         return ("Computer won! Score:" + computerScore + "-" + playerScore);
+    } else {
+        return ("Its a draw!")
     }
 }
