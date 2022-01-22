@@ -2,7 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function game() {
-    for (let i= 0; i < 6; i++){
+    for (let i= 0; i < 5; i++){
         let playerSelection = prompt("paper, scissors, rock?");
         let computerSelection = computerPlay();
 
