@@ -1,6 +1,12 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', round);
+});
+
 function game() {
     for (let i= 0; i < 5; i++){
         let playerSelection = prompt("paper, scissors, rock?");
