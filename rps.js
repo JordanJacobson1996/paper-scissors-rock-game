@@ -1,6 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
+displayScore(playerScore, computerScore);
 
 document.getElementById('scissors').onclick = function(){
     let playerSelection = this.id;
@@ -47,6 +48,7 @@ function round (playerSelection){
         return null;
     }
     displayRoundResult(resultContent);
+    displayScore(playerScore, computerScore);
 }
 
 
@@ -69,4 +71,9 @@ function winner (playerScore, computerScore){
 
 function displayRoundResult (resultContent) {
     document.getElementById("roundResultPara").textContent = resultContent;
+}
+
+function displayScore (playerScore, computerScore){
+    document.getElementById("pScore").textContent = "Player: " + playerScore;
+    document.getElementById("cScore").textContent = "Computer: " + computerScore;
 }
