@@ -25,34 +25,28 @@ function round (playerSelection){
 
     if (playerSelection === 'scissors' && computerSelection === 'paper'){
         playerScore++;
-        resultContent = 'Scissors beats paper. Player won!'
-        console.log(resultContent);
+        resultContent = 'Scissors beats paper. Player won!';
     } else if (playerSelection === 'paper' && computerSelection === 'rock'){
         playerScore++;
         resultContent = 'Paper beats rock. Player won!';
-        console.log(resultContent);
     } else if (playerSelection === 'rock' && computerSelection ==='scissors'){
         playerScore++;
         resultContent = 'Rock beats scissors. Player won!';
-        console.log(resultContent);
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore++;
         resultContent = 'Scissors beats paper. Computer won!';
-        console.log(resultContent);
     } else if (playerSelection === 'rock' && computerSelection === 'paper'){
         computerScore++;
         resultContent = 'Paper beats rock. Computer won!';
-        console.log(resultContent);
     } else if (playerSelection === 'scissors' && computerSelection ==='rock'){
         computerScore++;
         resultContent = 'Rock beats Scissors. Computer won!';
-        console.log(resultContent);
     } else if (playerSelection === computerSelection){
         resultContent = "It's a draw!";
-        console.log(resultContent);
     } else {
         return null;
     }
+    displayRoundResult(resultContent);
 }
 
 
@@ -73,3 +67,6 @@ function winner (playerScore, computerScore){
     }
 }
 
+function displayRoundResult (resultContent) {
+    document.getElementById("roundResultPara").textContent = resultContent;
+}
